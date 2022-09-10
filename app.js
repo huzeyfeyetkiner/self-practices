@@ -18,27 +18,19 @@ function addTask(){
 
         let liDOM = document.createElement("li")
         liDOM.classList.add("list-group-item")
-        liDOM.innerHTML = inputTaskDOM.value
-        
+        liDOM.innerHTML = inputTaskDOM.value        
 
         let closeBtnDOM = document.createElement("span")
         closeBtnDOM.textContent = "\u00D7"
         closeBtnDOM.classList.add("close")        
-        liDOM.append(closeBtnDOM)
+        liDOM.append(closeBtnDOM)        
         
-        
-        listTask.append(liDOM)
-        
+        listTask.append(liDOM)   
 
-        
-
-        inputTaskDOM.value = ""  
-        
+        inputTaskDOM.value = ""          
         
         closeBtnDOM.onclick = remove
-
-
-
+        liDOM.onclick = check
     }else {
         alert("BOŞ EKLEME YAPAMAZSINIZ")
     }  
@@ -48,4 +40,8 @@ function addTask(){
 
 function remove(){
     this.parentElement.remove()
+}
+
+function check() {
+    this.style.textDecoration = "line-through"
 }

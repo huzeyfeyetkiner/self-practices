@@ -7,6 +7,7 @@
 
 ul li{
     background-color: #d8d8d8 !important;
+    cursor: pointer;
 }
 
 ul li:nth-child(odd){
@@ -23,9 +24,12 @@ ul li:nth-child(odd){
     color: rgb(0, 0, 0) !important;
 }
 
-
+.bg-form {
+    background-color: #2d3748;
+}
 
 /* 
 .close:hover {
     background-color: #ffc107 ;
 } */
+

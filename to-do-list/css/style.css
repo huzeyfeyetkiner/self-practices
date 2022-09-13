@@ -33,3 +33,6 @@ ul li:nth-child(odd){
     background-color: #ffc107 ;
 } */
 
+.bg-checked {
+    background-color: #ffc107;
+}

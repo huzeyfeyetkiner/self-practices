@@ -45,3 +45,10 @@ function remove(){
 function check() {
     this.style.textDecoration = "line-through"
 }
+
+
+window.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        addTask();
+    }
+  });

@@ -1,16 +1,17 @@
 .bg-color {
-    background-color: #564256;
+    background-color: #ffffff;
 }
 
 
 .bg-form {
-    background-color: #E8E8E8;
+    background-color: #705f5f;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+    color: white;
 }
 
 .input-color {
-    background-color: #FC814A;
+    background-color: #ffffff;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }

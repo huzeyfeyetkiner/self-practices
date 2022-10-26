@@ -4,12 +4,25 @@
 let inputTaskDOM = document.querySelector("#inputTask")
 let btnAddDOM = document.querySelector("#btnAdd")
 let listTask = document.querySelector("#listTask")
-
+let ullength = document.getElementsByTagName("li")
 
 btnAddDOM.addEventListener("click", addTask)
 
 
+for(let i=0;i<ullength.length;i++){
 
+    let closeBtnDOM = document.createElement("span")
+    closeBtnDOM.innerHTML = "\u00D7"
+    closeBtnDOM.classList.add("close")        
+     
+    closeBtnDOM.addEventListener("click",remove)
+    ullength[i].append(closeBtnDOM)
+    
+
+    // <li><span class ="close">\u00D7</span></li>
+
+
+}
 
 
 function addTask(){

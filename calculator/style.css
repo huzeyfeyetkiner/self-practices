@@ -2,16 +2,51 @@
     background-color: #ffffff;
 }
 
+.display input[type="text"] {
+    height: 60px;
+    width: 100%;
+    text-align: right;
+    background-color: transparent;
+    color: white;
+}
+
+.display input[type="text"]:focus {
+    outline: none;
+}
 
 .bg-form {
+    margin-top: 15%;
     background-color: #705f5f;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
     color: white;
+    border-radius: 15px;
+    padding: 60px;
 }
 
 .input-color {
     background-color: #ffffff;
     border: none;
     color: rgb(0, 0, 0);
+}
+
+.btn-number {
+    width: 15%;
+    margin-top: 2%;
+}
+
+.btn-i { /* eşittir butonu için style*/
+    width: 66%;
+    margin-top: 2%;
+    background-color: aliceblue;
+    color: black;
+}
+
+.btn-a {
+    width: 24%;
+    margin-top: 2%;
+    background-color: aliceblue;
+    color: black;
+    font-size: 16px;
+    text-align: center;
 }

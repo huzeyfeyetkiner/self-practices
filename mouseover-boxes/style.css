@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.container {
+    width: 500px;
+    margin: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box {
+    width: 20px;
+    height: 20px;
+    background-color:gray;    
+    margin: 2px 2px;
+    transition: all 0.4s ease;
+}

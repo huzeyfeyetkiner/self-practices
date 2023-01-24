@@ -1,0 +1,46 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.flipcards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flipcard {
+    width: 200px;
+    height: 200px;
+    background-color:cadetblue;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px 10px 10px 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 4px 1px 10px 1px black;
+}
+
+.flipcard-head {
+    color:white;
+    font-weight: 32px;
+    margin-top: 60px;
+}
+
+.flipcard-body {
+    color: red;
+    font-weight: bold;
+    font-weight: 32px;
+    display: none;
+}
+
+.flipcard.clicked .flipcard-body {
+    display: block;
+}

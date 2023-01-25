@@ -1,0 +1,63 @@
+* {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: #ed8f03;
+}
+
+.container {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.player-one, .player-two{
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.submit-1, .submit-2 {
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    background: linear-gradient(to right, #e52d27, #b31217);
+    border-radius: 5px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.btn-roll {
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    background: linear-gradient(to right, #e52d27, #b31217);
+    border-radius: 5px;
+    width: 160px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.dice-1, .dice-2{
+    display: inline-block;
+}
+
+.p-1, .p-2 {
+    font-size: 24px;   
+}

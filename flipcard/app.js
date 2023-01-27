@@ -35,6 +35,8 @@ const vocabulary = [
 
 ]
 
+console.log(typeof(vocabulary));
+
 const flipcards = document.querySelector(".flipcards")
 
 for(let i =0;i<vocabulary.length;i++) {

@@ -16,7 +16,7 @@ let taskSchool = []
 
 
 if(JSON.parse(localStorage.getItem("schoolTasks")) != null ){
-    tasks = JSON.parse(localStorage.getItem("schoolTasks"))
+    let tasks = JSON.parse(localStorage.getItem("schoolTasks"))
 
     for(let i = 0; i<tasks.length;i++){
         taskSchool[i] = tasks[i]
@@ -130,5 +130,7 @@ function delTask () {
     let index = taskSchool.indexOf(this.parentElement.textContent.slice(0,-1))
     taskSchool.splice(index,1)
     localStorage.setItem("schoolTasks",JSON.stringify(taskSchool))
-
 }
+
+
+

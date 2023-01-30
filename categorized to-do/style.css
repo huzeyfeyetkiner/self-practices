@@ -11,7 +11,7 @@ body{
     background-color: #F4F9E9;
 }
 
-button {
+#btn-add {
     width: 19%;
     background-color: #B4B8AB;
     border: none;
@@ -39,4 +39,13 @@ button {
     background-color: #EEF0EB;
     border: none;
     outline: none;
+}
+
+.list-group-item {
+    /* cursor: pointer; */
+}
+
+.list-group-item.clicked {
+    text-decoration: line-through;
+    background-color: #B4B8AB;
 }

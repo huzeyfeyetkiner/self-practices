@@ -13,21 +13,28 @@ const otherListDOM = document.querySelector("#other-list")
 
 
 let taskSchool = []
-
+let checkedTaskSchool = []
 
 if(JSON.parse(localStorage.getItem("schoolTasks")) != null ){
     let tasks = JSON.parse(localStorage.getItem("schoolTasks"))
+    let checks = JSON.parse(localStorage.getItem("checkedListSchool"))
 
     for(let i = 0; i<tasks.length;i++){
         taskSchool[i] = tasks[i]
     }
 
+    for(let i=0;i<checks.length;i++){
+        checkedTaskSchool[i] = checks[i]
+    }
+
+    
+
     for(let i = 0; i<taskSchool.length;i++){
+
         const liDOM = document.createElement("li")
         liDOM.classList.add("list-group-item")       
         let task = taskSchool[i]
         liDOM.innerHTML = task
-
         //silme butonunu oluşturmak için
         const closeDOM = document.createElement("span")
         closeDOM.textContent = "x"
@@ -36,9 +43,19 @@ if(JSON.parse(localStorage.getItem("schoolTasks")) != null ){
             
         schoolListDOM.appendChild(liDOM)
         closeDOM.onclick = delTask
-        liDOM.onclick = checked  
+        liDOM.onclick = checked 
+        
 
+        //görevin tamamlanıp tamamlanmadığını kontrol etmek için
+        for(let j=0;j<checkedTaskSchool.length;j++){
+            if(taskSchool[i] == checkedTaskSchool[j]){
+                liDOM.classList.add("clicked")
+            }
+        }
+    
     }
+
+
 }
 
 // console.log(taskSchool);
@@ -121,6 +138,20 @@ btnAddDOM.addEventListener("click", () => {
 // üstüne tıklanan li elementini tamamlanmış görev olarak işaretlemek için kullanılan fonksiyon
 function checked() {
     this.classList.toggle("clicked")
+    if(this.classList.contains("clicked")){
+        let checkedTask = this.textContent.slice(0,-1)
+        checkedTaskSchool.push(checkedTask)
+        localStorage.setItem("checkedListSchool",JSON.stringify(checkedTaskSchool))
+        console.log(this.textContent.slice(0,-1));
+   }else {
+        for(let i=0;i<checkedTaskSchool.length;i++){
+            if(checkedTaskSchool[i] == this.textContent.slice(0,-1)){
+                checkedTaskSchool.splice(i,1)
+                localStorage.setItem("checkedListSchool",JSON.stringify(checkedTaskSchool))
+            }
+        }
+        console.log("Clicked removed");
+   }
 }
 
 // close butonuna tıklandığında görevi silmek için kullanılan fonksiyon
@@ -132,5 +163,9 @@ function delTask () {
     localStorage.setItem("schoolTasks",JSON.stringify(taskSchool))
 }
 
-
+// function finishedTasks(){
+//    if(this.parentElement.classList.contains("clicked")){
+//         console.log(this.parentElement);
+//    }
+// }
 

@@ -18,16 +18,21 @@ let checkedTaskSchool = []
 let taskHome = []
 let checkedTaskHome= []
 
+// önceden eklenmiş okul görevlerini yüklemek için
 if(JSON.parse(localStorage.getItem("schoolTasks")) != null ){
     let tasks = JSON.parse(localStorage.getItem("schoolTasks"))
-    let checks = JSON.parse(localStorage.getItem("checkedListSchool"))
 
     for(let i = 0; i<tasks.length;i++){
         taskSchool[i] = tasks[i]
     }
 
-    for(let i=0;i<checks.length;i++){
-        checkedTaskSchool[i] = checks[i]
+
+    // tamamlanmış görev olup olmadığını kontrol ediyor
+    if(JSON.parse(localStorage.getItem("checkedListSchool")) != null){
+        let checks = JSON.parse(localStorage.getItem("checkedListSchool"))
+        for(let i= 0;i<checks.length;i++){
+            checkedTaskSchool[i] = checks[i]
+        }
     }
 
     
@@ -61,17 +66,23 @@ if(JSON.parse(localStorage.getItem("schoolTasks")) != null ){
 
 }
 
+// önceden eklenmiş ev görevlerini yüklemek için
 if(JSON.parse(localStorage.getItem("homeTasks")) != null){
     let tasks = JSON.parse(localStorage.getItem("homeTasks"))
-    let checks = JSON.parse(localStorage.getItem("checkedListHome"))
+    
 
     for(let i =0; i<tasks.length;i++){
         taskHome[i] = tasks[i]
     }
 
-    for(let i= 0;i<checks.length;i++){
-        checkedTaskHome[i] = checks[i]
+    // tamamlanmış görev olup olmadığını kontrol ediyor
+    if(JSON.parse(localStorage.getItem("checkedListHome")) != null){
+        let checks = JSON.parse(localStorage.getItem("checkedListHome"))
+        for(let i= 0;i<checks.length;i++){
+            checkedTaskHome[i] = checks[i]
+        }
     }
+    
 
     for(let i=0;i<taskHome.length;i++){
         const liDOM = document.createElement("li")

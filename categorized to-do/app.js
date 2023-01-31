@@ -18,6 +18,9 @@ let checkedTaskSchool = []
 let taskHome = []
 let checkedTaskHome= []
 
+let taskOther = []
+let checkedTaskOther = []
+
 // önceden eklenmiş okul görevlerini yüklemek için
 if(JSON.parse(localStorage.getItem("schoolTasks")) != null ){
     let tasks = JSON.parse(localStorage.getItem("schoolTasks"))
@@ -112,6 +115,43 @@ if(JSON.parse(localStorage.getItem("homeTasks")) != null){
 
 }
 
+if(JSON.parse(localStorage.getItem("otherTasks")) != null){
+    let tasks = JSON.parse(localStorage.getItem("otherTasks"))
+
+    for(let i=0;i<tasks.length;i++){
+        taskOther[i] = tasks[i]
+    }
+
+    if(JSON.parse(localStorage.getItem("checkedListOther")) != null){
+        let checks = JSON.parse(localStorage.getItem("checkedListOther"))
+        for(let i= 0;i<checks.length;i++){
+            checkedTaskOther[i] = checks[i]
+        }
+    }
+
+    for(let i=0;i<tasks.length;i++){
+        const liDOM = document.createElement("li")
+        liDOM.classList.add("list-group-item")       
+        let task = taskOther[i]
+        liDOM.innerHTML = task
+        //silme butonunu oluşturmak için
+        const closeDOM = document.createElement("span")
+        closeDOM.textContent = "x"
+        closeDOM.classList.add("close")
+        liDOM.appendChild(closeDOM)            
+
+        closeDOM.onclick = delOtherTask
+        liDOM.onclick = checkedOtherTask
+        otherListDOM.appendChild(liDOM)
+
+        for(let j=0;j<checkedTaskOther.length;j++){
+            if(taskOther[i] == checkedTaskOther[j]){
+                liDOM.classList.add("clicked")
+            }
+        }
+    }
+}
+
         
 // ekleme butonuna tıklandığında görevlerin ilgili kategoriye eklenmesini sağlayan event
 btnAddDOM.addEventListener("click", () => {
@@ -170,8 +210,9 @@ btnAddDOM.addEventListener("click", () => {
         }else if(selectDOM.value == "Other"){
 
             const liDOM = document.createElement("li")
-            liDOM.classList.add("list-group-item")       
-            liDOM.innerHTML = taskDOM.value 
+            liDOM.classList.add("list-group-item")
+            let task = taskDOM.value       
+            liDOM.innerHTML = task
             
             //silme butonunu oluşturmak için
             const closeDOM = document.createElement("span")
@@ -180,8 +221,11 @@ btnAddDOM.addEventListener("click", () => {
             liDOM.appendChild(closeDOM)
             
             otherListDOM.appendChild(liDOM)
-            closeDOM.onclick = delTask
-            liDOM.onclick = checked  
+            closeDOM.onclick = delOtherTask
+            liDOM.onclick = checkedOtherTask
+            
+            taskOther.push(task)
+            localStorage.setItem("otherTasks",JSON.stringify(taskOther))
 
         }
         taskDOM.value = ""
@@ -245,6 +289,35 @@ function delHomeTask() {
     taskHome.splice(index,1)
     localStorage.setItem("homeTasks",JSON.stringify(taskHome))
 }
+
+function checkedOtherTask(){
+    this.classList.toggle("clicked")
+
+    if(this.classList.contains("clicked")){
+        let checkedTask = this.textContent.slice(0,-1)
+        checkedTaskOther.push(checkedTask)
+        localStorage.setItem("checkedListOther",JSON.stringify(checkedTaskOther))
+    }else {
+        for(let i=0;i<checkedTaskOther.length;i++){
+            if(checkedTaskOther[i] == this.textContent.slice(0,-1)){
+                checkedTaskOther.splice(i,1)
+                localStorage.setItem("checkedListOther",JSON.stringify(checkedTaskOther))
+            }
+        }
+    }
+}
+
+function delOtherTask() {
+    this.parentElement.remove();
+    let index = taskOther.indexOf(this.parentElement.textContent.slice(0,-1))
+    taskOther.splice(index,1)
+    localStorage.setItem("otherTasks",JSON.stringify(taskOther))
+}
+
+// function delOtherTask() {
+//     this.parentElement.remove();
+//     let index = taskOt
+// }
 
 
 

@@ -1,0 +1,8 @@
+{
+    "userName": "huzo",
+    "password" : 1234,
+    "serverIP" : "127.0.0.1",
+    "serverName" : "huzeyfeyetkiner.com",
+    "isActive" : true,
+    "IDs" : [1, 2, 3, 4]
+}

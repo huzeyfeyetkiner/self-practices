@@ -1,0 +1,131 @@
+* {
+    font-family: 'Gotham Screensmart Book', sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.24),0 2px 2px 0 rgba(0,0,0,.12);
+    position: sticky !important;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    width: 90px;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.btn-alis {
+    background-color: #008248;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.btn-alis:hover{
+    background-color: #3db982;
+}
+
+.btn-giris {
+    background-color: transparent;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+
+.btn-giris:hover {
+    background-color: gainsboro;
+}
+
+.btn-kayit {
+    background-color: black;
+    color: white !important;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.btn-kayit:hover {
+    background-color: rgba(0, 0, 0, 0.815);
+}
+
+.nav-right .nav-item {
+    margin-right: 10px;
+    color: black !important;
+}
+
+.main-left {
+    top: 0;
+    position: static;
+    text-align: center;
+    box-shadow: 8px -1px 12px -8px rgba(0,0,0,0.75);
+    height: 960px;
+}
+
+.main-left img{
+    width: 75%;
+    margin: 30px;
+}
+
+.main-right {
+    padding: 20px 40px;
+}
+
+.campaign {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-right a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.accordion-button{
+    font-size: 24px;
+    background-color: white !important;
+    color: rgba(0, 0, 0, 0.829) !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.accordion-item {
+    margin-bottom: 40px;
+}
+
+.accordion ul{
+    list-style-type: none;
+}
+
+.accordion ul li{
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.712);
+}
+
+.accordion ul li a{
+    color: rgba(0, 0, 0, 0.712);
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.logos {
+    font-size: 32px;
+}
+
+.footer ul li{
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.712);
+}
+
+.footer ul li a{
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.712);
+}

@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+*{
+    font-family:"gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;;
+
+}
+
+.nav-container {
+    background-color: #404eed;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.nav-container img{
+    width: 120px;
+}
+
+.navbar {
+    display: flex;
+    width: 60%;
+    min-width: 400px;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar ul li {
+    margin-right: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-login{
+    background-color: white;
+    text-decoration: none;
+    color: #404eed;
+    /* border: 1px solid black; */
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.main {
+    background-image: url("/img/background-2.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 40% 75%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 640px;
+    min-width: 400px;
+
+
+}
+
+.header, .header-text {
+    width: 640px;
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.main h1 {
+    font-family: "ABC Ginto Nord","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.main p {
+    font-size: 20px;
+    color: white;
+}
+
+.btn-download {
+    padding: 20px 60px;
+    border-radius: 30px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.header-buttons {
+    width: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-open {
+    padding: 20px 60px;
+    border-radius: 30px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.content-text{
+    display: inline;
+    text-align: center;
+}
+
+.content-container h2{
+    font-size: 32px;
+}
+
+.content-container p{
+    font-size: 20px;
+}
+
+.content-container:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+.content-last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.content-last .btn-download {
+    background-color: #404eed;
+    color: #f6f6f6;
+    margin-bottom: 40px;
+}
+
+.footer {
+    background-color: #23272a;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+}
+
+.footer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-head h2 {
+    color: #404eed;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.footer-head ul{
+    list-style-type: none;
+}
+
+.footer-head ul li{
+    margin-bottom: 15px;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer ul li:first-child{
+    color: #404eed !important;
+}

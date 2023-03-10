@@ -296,6 +296,7 @@ body {
         text-align: center;
         width: 60%;
         margin-left: 23%;
+        line-break: auto;
     }
 
     .content-container img {

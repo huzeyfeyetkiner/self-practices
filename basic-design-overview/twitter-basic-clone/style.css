@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: #000;
+}
+
+html {
+    font-size: 10px;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+.page-container{
+    width: 75%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+}
+
+.nav-text {
+    display: none;
+}
+
+.left-nav {
+    font-size: 3rem;
+    width: 5%;
+    padding: 0 2rem;
+    margin-right: 3rem;
+}
+
+.left-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.left-nav ul {
+    position: fixed;
+    z-index: 1;
+    width: 10%;
+    height: 100vh;
+    list-style-type: none;
+}
+
+.left-nav > ul > li {
+    margin-bottom: 3rem;
+}
+
+.btn-tweetle {
+    display: none;
+}
+
+.feed {
+    border-left: 1px solid #ffffff46;
+    border-right: 1px solid #ffffff46;
+    height: max-content;
+    width: 80%;
+    padding: 0.6rem;
+}
+
+
+.topics {
+    display: none;
+}
+
+.feed h2{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.share {
+    border-bottom: 1px solid #ffffff46;
+}
+
+.share-container {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 1rem;
+    
+}
+
+.share-container input {
+    background-color: transparent;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    z-index: 11;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.user-picture img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.share-medias {
+    padding: 1rem;
+    color: rgb(29, 155, 240);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.share-medias span {
+    margin-right: 2%;
+}
+
+.btn-share {
+    background-color: rgb(29, 155, 240);
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 3rem;
+    margin-left: auto;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.post-container {
+    border-bottom: 1px solid #ffffff46;
+    padding: 1rem;
+}
+
+.post-header{
+    display: flex;
+    align-items: center;
+}
+
+.post-header img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.id-name {
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+
+.post-content{
+    display: flex;
+    justify-content: center;
+}
+
+.post-content img {
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.post-footer {
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.479);
+}
+
+.topics {
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+
+    .topics {    
+        width: 50%;    
+        display: block;
+        padding: 1rem;
+    }
+
+    .topic-list ul {
+        margin-top: 5%;
+        background-color: #16181c;
+        list-style-type: none;
+        border-radius: 15px;
+        font-size: 1.6rem;
+    }
+
+    .topic-list > ul > li {
+        padding: 1rem;
+        padding: 1rem 3rem;
+        color: #fff;
+    }
+
+    .topic-tema, .count {
+        opacity: 0.6;
+        font-size: 1.2rem;
+    }
+
+    .topic-more, .topic-tema>a {
+        float: right;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .topic-search {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        background-color: #16181c;
+        color: #fff;
+        border-radius: 30px;
+    }
+
+    .topic-search input {
+        background-color: #16181c;
+        color: #fff;
+        padding: 2rem;
+        border: none;
+        outline: none;
+        width: 80%;
+    }
+
+    .page {
+        height: auto;
+    }
+
+    .nav-text{
+        display: none;
+    }
+}
+
+@media screen and (min-width:1600px) {
+
+    .left-nav { 
+        width: 30%;
+    }
+
+    .left-nav > li {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .nav-text{
+        font-size: 2rem;
+        display:contents;
+    }
+
+    .btn-tweetle {
+        display: block;
+        background-color: rgb(29, 155, 240);    
+        padding: 1rem;
+        text-align: center;
+        border-radius: 30px;
+    }
+}

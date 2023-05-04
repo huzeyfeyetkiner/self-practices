@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+}
+
+.navbar {
+  background-color: #1d2226;
+  padding: 1rem;
+}
+
+.navbar > ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar > ul > li > a {
+  color: #f0f0f0;
+  font-size: 2.5rem;
+}
+
+.navbar > ul > li > a > img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.profile > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+  margin-top: 1.6rem;
+  background-color: #1d2226;
+  position: relative;
+  padding: 0.6rem;
+  color: #f0f0f0;
+}
+
+.profile > .container > img {
+  border-radius: 50%;
+  width: 10rem;
+  z-index: 2;
+}
+
+.empty-space {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 8rem;
+  background-color: gray;
+  z-index: 1;
+}
+
+.info {
+  margin-top: 2rem;
+}
+
+.info > h5 {
+  font-size: 2.5rem;
+}
+
+.info > span {
+  font-size: 2rem;
+}
+
+.send-post {
+  margin-top: 1rem;
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1d2226;
+}
+
+.send-post > .input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.send-post > .input > img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.send-post > .input > input {
+  border: 0.6px solid #f0f0f0;
+  border-radius: 50px;
+  background-color: transparent;
+  width: 80%;
+  padding: 2rem;
+}
+
+.media-buttons {
+  /* background-color: aqua; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.media-buttons > ul {
+  width: 80%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.media-buttons > ul > li > a {
+  color: #70b5f9;
+  text-decoration: none;
+}
+
+.media-buttons > ul > li > a > span {
+  color: #f0f0f0;
+  text-decoration: none;
+}

@@ -13,9 +13,14 @@ body {
   background-color: #000;
 }
 
+/* NAVBAR CSS */
 .navbar {
   background-color: #1d2226;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar > ul {
@@ -36,6 +41,13 @@ body {
   border-radius: 50%;
 }
 
+/* NAVBAR CSS */
+
+.content {
+  margin-top: 6rem;
+}
+
+/* PROFİLE CSS */
 .profile > .container {
   display: flex;
   flex-direction: column;
@@ -59,7 +71,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 8rem;
+  height: 35%;
   background-color: gray;
   z-index: 1;
 }
@@ -75,7 +87,9 @@ body {
 .info > span {
   font-size: 2rem;
 }
+/* NAVBAR CSS BİTİŞ */
 
+/* SENDPOST CSS BAŞLANGIÇ */
 .send-post {
   margin-top: 1rem;
   padding: 3rem 0rem;
@@ -106,7 +120,6 @@ body {
 }
 
 .media-buttons {
-  /* background-color: aqua; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -130,4 +143,110 @@ body {
 .media-buttons > ul > li > a > span {
   color: #f0f0f0;
   text-decoration: none;
+}
+/* SEND POST CSS BİTİŞ */
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  margin: 1rem 0rem;
+  background-color: #1d2226;
+}
+
+.post > .post-header {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.post > .post-header > img {
+  width: 4.5rem;
+}
+
+.post-header > .header-text {
+  margin-left: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-text > a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.header-text > span {
+  margin-top: 0.6rem;
+  color: #f0f0f09a;
+  font-size: 1.2rem;
+}
+
+.post-header > a {
+  color: #f0f0f0;
+  font-size: 2rem;
+  margin-left: auto;
+}
+
+.post-text {
+  padding: 0rem 1rem;
+}
+
+.post-text > span {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+}
+
+.post-img {
+  width: 100%;
+}
+
+.post-img > img {
+  width: 100%;
+  height: 50rem;
+  object-fit: fill;
+}
+
+.post-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-footer > .counter {
+  padding: 1rem 2.4rem;
+}
+
+.border {
+  align-self: center;
+  width: 90%;
+  height: 1px;
+  background-color: #f0f0f062;
+}
+
+.post-footer > .counter > span {
+  font-size: 1.4rem;
+  color: #f0f0f0;
+}
+
+.post-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.post-buttons > button {
+  background-color: transparent;
+  color: #f0f0f0;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  width: 20rem;
+  font-size: 1.5rem;
+}
+
+.post-buttons > button:hover {
+  background-color: #76777760;
 }
